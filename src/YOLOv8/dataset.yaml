@@ -1,0 +1,8 @@
+path: C:\Users\My PC\Desktop\YOLOv8\datasets\yolo_annotations
+train: train
+val: val
+test: test
+
+names:
+  0: object
+

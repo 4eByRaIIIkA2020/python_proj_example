@@ -1,4 +1,3 @@
-# Импорт модуля tkinter и его подмодулей
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
@@ -7,14 +6,13 @@ from torchvision import models, transforms
 import os
 import torch.nn as nn
 
-# Глобальные переменные для хранения классификатора, устройства и информации об изображении
 classifier = None
 device = None
 image_folder = None
 image_files = []
 image_index = 0
 
-# Функция для загрузки модели классификатора
+# ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ МОДЕЛИ КЛАССИФИКАТОРА
 def load_classifier_model(pth_file, device, model_type):
     # Инициализация выбранной модели
     if model_type == "resnet18":
@@ -30,7 +28,7 @@ def load_classifier_model(pth_file, device, model_type):
         nn.Linear(num_ftrs, 500),
         nn.ReLU(),
         nn.Dropout(),
-        nn.Linear(500, 2)  # Предполагается, что у нас есть 2 класса
+        nn.Linear(500, 2)
     )
 
     # Загрузка состояния словаря
@@ -45,7 +43,7 @@ def load_classifier_model(pth_file, device, model_type):
     # Возврат загруженной модели
     return model
 
-# Функция для классификации изображения
+# ФУНКЦИЯ ДЛЯ КЛАССИФИКАЦИИ ИЗОБРАЖЕНИЯ
 def inference_classifier(classifier, image_path):
     # Загрузка и предварительная обработка изображения
     image = Image.open(image_path)
@@ -66,7 +64,7 @@ def inference_classifier(classifier, image_path):
     photo_image = ImageTk.PhotoImage(image)
     return predicted_class, photo_image
 
-# Функция для отображения изображения и класса
+# ФУНКЦИЯ ДЛЯ ОТОБРАЖЕНИЯ ИЗОБРАЖЕНИЯ И КЛАССА
 def display_image_and_class(photo_image, predicted_class):
     # Обновление метки изображения
     image_label.config(image=photo_image)
@@ -75,7 +73,7 @@ def display_image_and_class(photo_image, predicted_class):
     # Обновление метки класса
     class_label.config(text=f"Класс: {predicted_class}")
 
-# Функция для навигации по изображениям
+# ФУНКЦИЯ ДЛЯ НАВИГАЦИИ ПО ИЗОБРАЖЕНИЯМ
 def navigate_images(direction):
     global image_index, image_files, image_folder
     if image_folder is not None and image_files:
@@ -87,7 +85,7 @@ def navigate_images(direction):
         predicted_class, photo_image = inference_classifier(classifier, image_path)
         display_image_and_class(photo_image, predicted_class)
 
-# Функция для выбора PTH-файла
+# ФУНКЦИЯ ДЛЯ ВЫБОРА PTH-ФАЙЛА
 def select_pth_file():
     global classifier, device, pth_file_path
     pth_file_path = filedialog.askopenfilename(filetypes=[("PTH files", "*.pth")])
@@ -98,7 +96,7 @@ def select_pth_file():
         classifier = load_classifier_model(pth_file_path, device, model_type_var.get())
         classifier.eval()
 
-# Функция для выбора папки с изображениями
+# ФУНКЦИЯ ДЛЯ ВЫБОРА ПАПКИ С ИЗОБРАЖЕНИЯМИ
 def select_image_folder():
     global image_folder, image_files, image_index, image_folder_path
     image_folder_path = filedialog.askdirectory()
@@ -111,7 +109,7 @@ def select_image_folder():
         if image_files:
             navigate_images(0)
 
-# Функция для центрирования окна на экране
+# ФУНКЦИЯ ДЛЯ ЦЕНТРИРОВАНИЯ ОКНА TKINTER НА ЭКРАНЕ
 def center_window(root, width=1200, height=600):
     # Получение ширины и высоты экрана
     screen_width = root.winfo_screenwidth()
@@ -124,7 +122,7 @@ def center_window(root, width=1200, height=600):
 
     # Делаем окно полноэкранным
     root.attributes('-fullscreen', True)
-# Создание главного окна
+
 root = tk.Tk()
 root.title("Классификатор изображений")
 
@@ -135,64 +133,51 @@ center_window(root)
 frame = tk.Frame(root)
 frame.pack(fill=tk.X)
 
-# Выбор типа модели
 tk.Label(frame, text="Выберите тип модели:").pack(side=tk.LEFT)
 model_type_var = tk.StringVar()
 model_type_var.set("resnet50")
 model_type_menu = tk.OptionMenu(frame, model_type_var, "resnet18", "resnet34", "resnet50")
 model_type_menu.pack(side=tk.LEFT)
 
-# Выбор PTH файла
 tk.Label(frame, text="Выберите PTH файл:").pack(side=tk.LEFT)
 pth_file_entry = tk.Entry(frame, width=50)
 pth_file_entry.pack(side=tk.LEFT)
 
-# Кнопка для выбора PTH файла
 tk.Button(frame, text="Обзор", command=select_pth_file).pack(side=tk.LEFT)
 
-# Выбор устройства
 tk.Label(frame, text="Выберите устройство:").pack(side=tk.LEFT)
 cuda_var = tk.StringVar()
 cuda_var.set("CUDA" if torch.cuda.is_available() else "CPU")
 cuda_menu = tk.OptionMenu(frame, cuda_var, "CUDA", "CPU")
 cuda_menu.pack(side=tk.LEFT)
 
-# Entry для пути к папке с изображениями
 image_folder_label = tk.Label(frame, text="Путь к папке с изображениями:")
 image_folder_label.pack(side=tk.LEFT, padx=(10, 5))
 image_folder_entry = tk.Entry(frame, width=50)
 image_folder_entry.pack(side=tk.LEFT)
 
-# Кнопка для выбора папки с изображениями
 image_folder_button = tk.Button(frame, text="Обзор", command=select_image_folder)
 image_folder_button.pack(side=tk.LEFT, padx=(5, 10))
 
-# Создание рамки для отображения изображения
 image_frame = tk.Frame(root)
 image_frame.pack(fill=tk.BOTH, expand=True)
 
-# Label для отображения изображения
 image_label = tk.Label(image_frame)
 image_label.pack(fill=tk.BOTH, expand=True)
 
-# Label для отображения класса с большим размером
 class_label = tk.Label(image_frame, text="Класс:", font=("Helvetica", 24))
 class_label.pack(side=tk.BOTTOM, pady=20)
 
-# Рамка для кнопок перелистывания
 button_frame = tk.Frame(image_frame)
 button_frame.pack(side=tk.BOTTOM, fill=tk.X)
 
-# Кнопки перелистывания по центру и больше
 prev_button = tk.Button(button_frame, text="Предыдущее", command=lambda: navigate_images(-1), font=("Helvetica", 16))
 prev_button.pack(side=tk.LEFT, padx=(10, 5))
 
 next_button = tk.Button(button_frame, text="Следующее", command=lambda: navigate_images(1), font=("Helvetica", 16))
 next_button.pack(side=tk.RIGHT, padx=(5, 10))
 
-# Кнопка "Выйти из программы"
 exit_button = tk.Button(root, text="Выйти из программы", command=root.quit, font=("Helvetica", 16))
 exit_button.pack(side=tk.BOTTOM, pady=20)
 
-# Запуск цикла событий GUI
 root.mainloop()
