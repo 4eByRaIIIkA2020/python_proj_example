@@ -1,0 +1,427 @@
+{
+    "width": 640,
+    "height": 480,
+    "channels": 3,
+    "objects": [
+        {
+            "xtl": 112,
+            "ytl": 95,
+            "xbr": 123,
+            "ybr": 108,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 237,
+            "ytl": 147,
+            "xbr": 245,
+            "ybr": 158,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 76,
+            "ytl": 162,
+            "xbr": 86,
+            "ybr": 174,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 231,
+            "ytl": 109,
+            "xbr": 241,
+            "ybr": 120,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 211,
+            "ytl": 9,
+            "xbr": 220,
+            "ybr": 21,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 170,
+            "ytl": 70,
+            "xbr": 180,
+            "ybr": 81,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 215,
+            "ytl": 94,
+            "xbr": 224,
+            "ybr": 105,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 159,
+            "ytl": 51,
+            "xbr": 167,
+            "ybr": 61,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 156,
+            "ytl": 89,
+            "xbr": 167,
+            "ybr": 96,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 173,
+            "ytl": 181,
+            "xbr": 182,
+            "ybr": 190,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 100,
+            "ytl": 176,
+            "xbr": 111,
+            "ybr": 186,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 174,
+            "ytl": 25,
+            "xbr": 182,
+            "ybr": 36,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 171,
+            "ytl": 103,
+            "xbr": 183,
+            "ybr": 112,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 130,
+            "ytl": 72,
+            "xbr": 143,
+            "ybr": 79,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 215,
+            "ytl": 137,
+            "xbr": 227,
+            "ybr": 146,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 296,
+            "ytl": 81,
+            "xbr": 303,
+            "ybr": 93,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 136,
+            "ytl": 109,
+            "xbr": 151,
+            "ybr": 117,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 303,
+            "ytl": 124,
+            "xbr": 311,
+            "ybr": 136,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 228,
+            "ytl": 225,
+            "xbr": 235,
+            "ybr": 234,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 109,
+            "ytl": 151,
+            "xbr": 118,
+            "ybr": 157,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 161,
+            "ytl": 122,
+            "xbr": 174,
+            "ybr": 129,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 235,
+            "ytl": 81,
+            "xbr": 245,
+            "ybr": 96,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 273,
+            "ytl": 72,
+            "xbr": 280,
+            "ybr": 83,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 105,
+            "ytl": 132,
+            "xbr": 115,
+            "ybr": 138,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 121,
+            "ytl": 130,
+            "xbr": 132,
+            "ybr": 135,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 60,
+            "ytl": 186,
+            "xbr": 69,
+            "ybr": 198,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 123,
+            "ytl": 205,
+            "xbr": 130,
+            "ybr": 215,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 140,
+            "ytl": 181,
+            "xbr": 150,
+            "ybr": 187,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 132,
+            "ytl": 164,
+            "xbr": 142,
+            "ybr": 170,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 165,
+            "ytl": 157,
+            "xbr": 174,
+            "ybr": 162,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 200,
+            "ytl": 178,
+            "xbr": 208,
+            "ybr": 186,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 13,
+            "ytl": 211,
+            "xbr": 22,
+            "ybr": 222,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 130,
+            "ytl": 147,
+            "xbr": 140,
+            "ybr": 151,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 86,
+            "ytl": 215,
+            "xbr": 91,
+            "ybr": 221,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 78,
+            "ytl": 193,
+            "xbr": 87,
+            "ybr": 205,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 94,
+            "ytl": 153,
+            "xbr": 103,
+            "ybr": 159,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 42,
+            "ytl": 235,
+            "xbr": 51,
+            "ybr": 243,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 121,
+            "ytl": 186,
+            "xbr": 128,
+            "ybr": 194,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 60,
+            "ytl": 210,
+            "xbr": 66,
+            "ybr": 217,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 104,
+            "ytl": 200,
+            "xbr": 111,
+            "ybr": 211,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 15,
+            "ytl": 169,
+            "xbr": 23,
+            "ybr": 181,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 76,
+            "ytl": 213,
+            "xbr": 81,
+            "ybr": 220,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 32,
+            "ytl": 136,
+            "xbr": 40,
+            "ybr": 149,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 40,
+            "ytl": 226,
+            "xbr": 46,
+            "ybr": 232,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 96,
+            "ytl": 218,
+            "xbr": 101,
+            "ybr": 227,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 70,
+            "ytl": 192,
+            "xbr": 77,
+            "ybr": 203,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 113,
+            "ytl": 220,
+            "xbr": 118,
+            "ybr": 229,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 150,
+            "ytl": 139,
+            "xbr": 159,
+            "ybr": 145,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 70,
+            "ytl": 191,
+            "xbr": 79,
+            "ybr": 204,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 97,
+            "ytl": 218,
+            "xbr": 105,
+            "ybr": 227,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 53,
+            "ytl": 235,
+            "xbr": 60,
+            "ybr": 243,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 76,
+            "ytl": 213,
+            "xbr": 83,
+            "ybr": 221,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 22,
+            "ytl": 160,
+            "xbr": 30,
+            "ybr": 167,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 80,
+            "ytl": 193,
+            "xbr": 88,
+            "ybr": 205,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 72,
+            "ytl": 192,
+            "xbr": 80,
+            "ybr": 204,
+            "class_name": "ship"
+        },
+        {
+            "xtl": 39,
+            "ytl": 228,
+            "xbr": 45,
+            "ybr": 243,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 40,
+            "ytl": 235,
+            "xbr": 49,
+            "ybr": 243,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 40,
+            "ytl": 196,
+            "xbr": 45,
+            "ybr": 200,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 381,
+            "ytl": 44,
+            "xbr": 387,
+            "ybr": 50,
+            "class_name": "aircraft"
+        },
+        {
+            "xtl": 59,
+            "ytl": 237,
+            "xbr": 65,
+            "ybr": 243,
+            "class_name": "aircraft"
+        }
+    ]
+}

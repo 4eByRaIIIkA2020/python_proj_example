@@ -3,8 +3,8 @@ from tkinter import filedialog
 import cv2
 from ultralytics import YOLO
 
-# Загрузите вашу обученную модель YOLOv8
-model = YOLO('yolov8n_iteration_2.pt')
+# Загрузка нашей обученной модели YOLOv8
+model = YOLO('yolov8n_iteration_3.pt')
 
 def select_image():
     file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.jpg;*.jpeg;*.png")])
